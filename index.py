@@ -54,6 +54,8 @@ for (i, c) in enumerate(cnts):
 
     cv2.putText(image , shape , (x, y-10), cv2.FONT_HERSHEY_SIMPLEX,
         0.5, (228, 0, 159), 1)
+
+    print("Contour: {} Aspect Ratio={:.2f} Extent={:.2f} Soidity={:.2f}".format(i+1, aspectRatio, extent, solidity))
     
     cv2.imshow('Image', image)
     cv2.imshow('Convex Hull', hullImage)
